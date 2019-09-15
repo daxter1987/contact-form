@@ -23,3 +23,7 @@
         }
     }
 }
+
+//Add these 2 lines to psr-4 of root project for this to work
+//"daxter1987\\Contactform\\Http\\Controllers\\": "vendor/daxter1987/contactform/src/Http/controllers/",
+//"daxter1987\\Contactform\\Models\\": "vendor/daxter1987/contactform/src/Models/",
