@@ -10,14 +10,22 @@ class ContactFormServiceProvider extends ServiceProvider {
         $this->loadRoutesFrom(__DIR__.'/routes/web.php');
         $this->loadViewsFrom(__DIR__.'/resources/views', 'contactform');
         $this->loadMigrationsFrom(__DIR__.'/database/migrations');
-        $this->publishes([
-            __DIR__.'/app/Http/Controllers/DaxControllers' => app_path('Http/Controllers/DaxControllers'),
-        ], 'dax');
-        $this->publishes([
-            __DIR__.'/app/Http/Controllers/DaxModels' => app_path('/Http/Controllers/DaxModels'),
-        ], 'dax');
+        $this->publishControllers();
+        $this->publishModels();
     }
     public function register()
     {
+    }
+
+    private function publishControllers(){
+        $this->publishes([
+            __DIR__.'/app/Http/Controllers/DaxControllers' => app_path('Http/Controllers/DaxControllers'),
+        ], 'dax');
+    }
+
+    private function publishModels(){
+        $this->publishes([
+            __DIR__.'/app/Http/Models/DaxModels' => app_path('/Http/Models/DaxModels'),
+        ], 'dax');
     }
 }
