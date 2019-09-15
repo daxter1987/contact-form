@@ -53,5 +53,7 @@ class ConfigureComposer extends Command
         $handle = fopen($composer_file, 'w') or die('Cannot open file:  '.$composer_file);
         $data = json_encode($project_composer_array, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
         fwrite($handle, $data);
+
+        echo "Composer updated, run composer dump-autoload!";
     }
 }
