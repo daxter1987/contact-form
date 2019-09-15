@@ -13,22 +13,8 @@ class ContactFormServiceProvider extends ServiceProvider {
         $this->commands([
             Console\Commands\ConfigureComposer::class,
         ]);
-        $this->publishControllers();
-        $this->publishModels();
     }
     public function register()
     {
-    }
-
-    private function publishControllers(){
-        $this->publishes([
-            __DIR__.'/app/Http/Controllers/DaxControllers' => app_path('Http/Controllers/DaxControllers'),
-        ], 'dax');
-    }
-
-    private function publishModels(){
-        $this->publishes([
-            __DIR__.'/app/Http/Models/DaxModels' => app_path('/Http/Models/DaxModels'),
-        ], 'dax');
     }
 }
