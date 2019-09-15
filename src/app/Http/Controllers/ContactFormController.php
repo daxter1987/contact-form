@@ -1,9 +1,9 @@
 <?php
 
-namespace daxter1987\Controllers;
+namespace daxter1987\contactform\Controllers;
 
 use App\Http\Controllers\Controller;
-use daxter1987\Models\ContactForm;
+use daxter1987\contactform\Models\ContactForm;
 use Illuminate\Http\Request;
 
 class ContactFormController extends Controller {

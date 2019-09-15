@@ -11,9 +11,10 @@ class ContactFormServiceProvider extends ServiceProvider {
         $this->loadViewsFrom(__DIR__.'/resources/views', 'contactform');
         $this->loadMigrationsFrom(__DIR__.'/database/migrations');
         $this->commands([
-            Console\Commands\ConfigureComposer::class,
+            Commands\ConfigureComposer::class,
         ]);
     }
+
     public function register()
     {
     }

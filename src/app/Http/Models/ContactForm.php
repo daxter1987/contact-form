@@ -1,6 +1,6 @@
 <?php
 
-namespace daxter1987\Models;
+namespace daxter1987\contactform\Models;
 use Illuminate\Database\Eloquent\Model;
 
 class ContactForm extends Model

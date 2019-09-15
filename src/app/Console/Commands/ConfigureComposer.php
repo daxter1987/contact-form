@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Console\Commands;
+namespace daxter1987\contactform\Commands;
 
 use Illuminate\Console\Command;
 
@@ -41,12 +41,12 @@ class ConfigureComposer extends Command
 
         $project_composer_array = json_decode($project_composer_json, 1);
 
-        if(empty($project_composer_array['autoload']['psr-4']["daxter1987\\Controllers\\"])){
-            $project_composer_array['autoload']['psr-4']["daxter1987\\Controllers\\"] = "vendor/daxter1987/contactform/src/Http/Controllers/";
+        if(empty($project_composer_array['autoload']['psr-4']["daxter1987\\contactform\\Controllers\\"])){
+            $project_composer_array['autoload']['psr-4']["daxter1987\\contactform\\Controllers\\"] = "vendor/daxter1987/contactform/src/Http/Controllers/";
         }
 
-        if(empty($project_composer_array['autoload']['psr-4']["daxter1987\\Models\\"])){
-            $project_composer_array['autoload']['psr-4']["daxter1987\\Models\\"] = "vendor/daxter1987/contactform/src/Http/Models/";
+        if(empty($project_composer_array['autoload']['psr-4']["daxter1987\\contactform\\Models\\"])){
+            $project_composer_array['autoload']['psr-4']["daxter1987\\contactform\\Models\\"] = "vendor/daxter1987/contactform/src/Http/Models/";
         }
 
         $composer_file = 'composer.json';
@@ -54,6 +54,6 @@ class ConfigureComposer extends Command
         $data = json_encode($project_composer_array, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
         fwrite($handle, $data);
 
-        echo "Composer updated, run composer dump-autoload!";
+        echo "\033[33mComposer updated, run composer dump-autoload!\033[0m\n";
     }
 }
