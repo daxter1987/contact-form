@@ -10,6 +10,13 @@
     ],
     "minimum-stability": "dev",
     "require": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "daxter1987\\contactform\\ContactFormServiceProvider"
+            ]
+        }
+    },
     "autoload": {
         "psr-4": {
             "daxter1987\\contactform\\": "src/"
