@@ -1,6 +1,6 @@
 <?php
-// MyVendor\Contactform\src\Models\ContactForm.php
-namespace daxter1987\Contactform\Models;
+
+namespace App\Http\Models\DaxModels;
 use Illuminate\Database\Eloquent\Model;
 
 class ContactForm extends Model
