@@ -1,8 +1,6 @@
 <?php
 
-// MyVendor\contactform\src\ContactFormServiceProvider.php
 namespace daxter1987\contactform;
-
 use Illuminate\Support\ServiceProvider;
 
 class ContactFormServiceProvider extends ServiceProvider {
@@ -11,10 +9,13 @@ class ContactFormServiceProvider extends ServiceProvider {
     {
         $this->loadRoutesFrom(__DIR__.'/routes/web.php');
         $this->loadViewsFrom(__DIR__.'/resources/views', 'contactform');
-        $this->loadMigrationsFrom(__DIR__.'/Database/migrations');
+        $this->loadMigrationsFrom(__DIR__.'/database/migrations');
         $this->publishes([
-            __DIR__.'/Http/controllers' => base_path('app/Http/Controllers/DaxControllers'),
-        ]);
+            __DIR__.'/Http/Controllers/DaxControllers' => app_path('Http/Controllers/DaxControllers'),
+        ], 'dax');
+        $this->publishes([
+            __DIR__.'/Http/Controllers/DaxModels' => app_path('/Http/Controllers/DaxModels'),
+        ], 'dax');
     }
     public function register()
     {

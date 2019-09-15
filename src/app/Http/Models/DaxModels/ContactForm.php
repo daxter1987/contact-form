@@ -2,6 +2,7 @@
 // MyVendor\Contactform\src\Models\ContactForm.php
 namespace daxter1987\Contactform\Models;
 use Illuminate\Database\Eloquent\Model;
+
 class ContactForm extends Model
 {
     protected $guarded = [];

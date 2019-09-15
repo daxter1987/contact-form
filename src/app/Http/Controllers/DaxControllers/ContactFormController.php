@@ -1,9 +1,10 @@
 <?php
-// MyVendor\Contactform\src\Http\Controllers\ContactFormController.php
-namespace daxter1987\Contactform\Http\Controllers;
+
+namespace App\Http\Controllers\DaxControllers;
+
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use daxter1987\Contactform\Models\ContactForm;
+use App\Http\Models\DaxModels\ContactForm;
 
 class ContactFormController extends Controller {
 
